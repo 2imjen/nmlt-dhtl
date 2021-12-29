@@ -17,7 +17,7 @@ int main () {
     for(i = n; i > 0; i--)
         res = sqrt(res + i);
 
-    printf("F(n) = %.5f", res);
+    printf("F(n) = %g", res);
 
     return 0;
 }

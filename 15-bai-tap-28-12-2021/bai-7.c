@@ -16,7 +16,7 @@ int main () {
     for (i = 1; i < n; i++)
         res += i * (i + 1) * (i + 2);
 
-    printf("A = %d", res);
+    printf("A = %d\n", res);
 
     return 0;
 }

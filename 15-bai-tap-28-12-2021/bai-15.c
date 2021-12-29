@@ -2,7 +2,7 @@
 
 int main () {
     int n;
-    int bac1, bac2, bac3, bac4, bac5, bac6;
+    int bac1, bac2, bac3, bac4, bac5;
     int res;
 
     do {
@@ -29,7 +29,7 @@ int main () {
     else if (n <= 400)
         res = bac4 + (n - 300) * 2503;
     else
-        res = bac5 + (n - 400) * 2578;
+        res = bac5 + (n - 400) * 2587;
 
     printf("So tien phai nop: %d", res);
 

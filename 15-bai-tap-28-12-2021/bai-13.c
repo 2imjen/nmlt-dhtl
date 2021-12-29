@@ -22,7 +22,7 @@ int main () {
 
     res = (a + b + c) - min - max;
 
-    printf("X = %.2f", res);
+    printf("X = %g", res);
 
     return 0;
 }

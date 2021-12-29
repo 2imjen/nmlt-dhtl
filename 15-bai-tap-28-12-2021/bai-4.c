@@ -19,7 +19,7 @@ int main () {
     for (i = 0; i <= 4; i++)
         res += a[i] * pow(x, i);
 
-    printf("f(x) = %.2f", res);
+    printf("f(x) = %g", res);
 
     return 0;
 }
