@@ -23,21 +23,23 @@ int main() {
 
     for(i = 0; i < lenS; i++) {
         if(s[i] == w[0]) {
+            index = i;
             for(j = 1; j < lenW; j++)
                 if(w[j] != s[i+j]) {
                     check = 0;
                     break;
                 } else 
                     check = 1;
-            if(check) {
-                index = i;
+            if(check)
                 break;
-            }
         }
     }
 
     if(check)
         printf("W xuat hien trong S o vi tri %d\n", index);
+    else {
+        printf("W khong xuat hien trong S\n");
+    }
 
     return 0;
 }

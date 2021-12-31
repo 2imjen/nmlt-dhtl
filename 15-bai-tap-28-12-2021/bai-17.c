@@ -11,7 +11,7 @@ int main() {
 
     for(i = 1; i <= m; i++) {
         for(j = 1; j <= n; j++)
-            if(j == n)
+            if(j == 1)
                 printf("0");
             else
                 printf("0 ");

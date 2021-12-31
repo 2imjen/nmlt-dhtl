@@ -14,6 +14,7 @@ int main() {
 
     while(1) {
         inManHinh();
+
         scanf("%d", &n);
 
         switch (n) {
@@ -21,13 +22,13 @@ int main() {
                 printf("Chao buoi sang\n");
                 break;
             case 2:
-                printf("Chao buoi trua\n");
+                printf("Den gio nghi trua roi, di an thoi\n");
                 break;
             case 3:
-                printf("Chao buoi chieu\n");
+                printf("Het gio lam viec, ve nha nao\n");
                 break;
             case 4:
-                printf("Chao buoi toi\n");
+                printf("Chuan bi ngu buoi toi\n");
                 break;
             case 5:
                 printf("Chuc ngu ngon\n");
