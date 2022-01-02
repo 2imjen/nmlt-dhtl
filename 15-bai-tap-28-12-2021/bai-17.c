@@ -11,12 +11,9 @@ int main() {
 
     for(i = 1; i <= m; i++) {
         for(j = 1; j <= n; j++)
-            if(j == 1)
-                printf("0");
-            else
-                printf("0 ");
-        
-        printf("\n");
+            if(j == n)
+                printf("0\n");
+            printf("0 ");
     }
 
     return 0;

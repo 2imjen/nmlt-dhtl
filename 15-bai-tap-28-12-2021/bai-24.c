@@ -1,33 +1,35 @@
 #include <stdio.h>
 #include <string.h>
 
-void trim(char w[], int *lenW) {
-    while(w[0] == ' ') {
+void trim(char w[]) {
+    int lenW, i;
+
+    while(w[0] == ' ')
         strcpy(&w[0], &w[1]);
-        *lenW -= 1;
+
+    lenW = strlen(w);
+
+    i = 1;
+    while(w[lenW - i] == ' ') {
+        w[lenW - i] = '\0';
+        i++;
     }
-
-
-    // while(w[*lenW - 1] == ' ')
-    //     *lenW -= 1;
-
-    // w[*lenW + 1] = '\0';
 }
 
-void removeSpacesBetweenWord(char w[], int *lenW) {
-    int i;
+void removeSpacesBetweenWord(char w[]) {
+    int i, lenW, count;
 
-    i = 0;
-    while(i < *lenW - 1) {
+    lenW = strlen(w);
+    i = 0, count = 0;
+    while(i < lenW - count) {
         if(w[i] == ' ' && w[i+1] == ' ') {
             strcpy(&w[i], &w[i+1]);
-            *lenW -= 1;
+            count++;
+            w[lenW - count] = '\0';
         }
         else
             i++;
     }
-
-    // w[*lenW + 1] = '\0';
 }
 
 int main() {
@@ -41,11 +43,10 @@ int main() {
 
     lenW = strlen(w);
 
-    trim(w, &lenW);
+    trim(w);
 
-    removeSpacesBetweenWord(w, &lenW);
+    removeSpacesBetweenWord(w);
 
     printf("Chuan hoa = ");
-
     printf("%s", w);
 }

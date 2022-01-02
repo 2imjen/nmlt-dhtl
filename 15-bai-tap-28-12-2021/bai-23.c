@@ -13,6 +13,9 @@ int main() {
 
     printf("Nhap W = ");
     fgets(w, sizeof(w), stdin);
+
+    while (getchar() != '\n');
+
     printf("Nhap S = ");
     fgets(s, sizeof(s), stdin);
 
