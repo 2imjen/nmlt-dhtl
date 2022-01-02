@@ -25,7 +25,7 @@ int main() {
         if((s[i] != ' ' && s[i+1] == ' ') || (s[i] != ' ' && s[i+1] == '\n'))
             count++;
     printf("\nXau S co %d tu!", count);
-
+    
     // printf("\n");
     // for(i = 0; i < lenS+1; i++)
     //     printf("%d ", s[i]);

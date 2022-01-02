@@ -9,12 +9,15 @@ int main() {
     int index;
 
     printf("Nhap xau S: ");
-    fgets(s, sizeof(s), stdin);
-    printf("Nhap xau W: ");
-    fgets(w, sizeof(w), stdin);
+    scanf("%[^\n]s",s);
 
-    lenS = strlen(s) - 1;
-    lenW = strlen(w) - 1;
+    while ((getchar()) != '\n');
+
+    printf("Nhap xau W: ");
+    scanf("%[^\n]s",w);
+
+    lenS = strlen(s);
+    lenW = strlen(w);
 
     if(lenW > lenS) {
         printf("W khong xuat hien trong S");
@@ -23,6 +26,7 @@ int main() {
 
     for(i = 0; i < lenS; i++) {
         if(s[i] == w[0]) {
+            check = 1;
             index = i;
             for(j = 1; j < lenW; j++)
                 if(w[j] != s[i+j]) {
