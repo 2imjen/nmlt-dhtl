@@ -1,28 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char s[100000], w[100000];
-    int lenS, lenW;
-    int check;
+int findSubstrIntoStr(char s[], char w[]) {
     int i, j;
+    int check;
     int index;
-
-    printf("Nhap xau S: ");
-    scanf("%[^\n]s",s);
-
-    while ((getchar()) != '\n');
-
-    printf("Nhap xau W: ");
-    scanf("%[^\n]s",w);
+    int lenS, lenW;
 
     lenS = strlen(s);
     lenW = strlen(w);
-
-    if(lenW > lenS || !strstr(s, w)) {
-        printf("W khong xuat hien trong S\n");
-        return 0;
-    }
 
     // xử lí bằng hàm
     // index = strlen(s) - strlen(strstr(s, w));
@@ -41,18 +27,34 @@ int main() {
     //                 check = 1;
 
     //         if(check)
-    //             break;
+    //             return index;
     //     }
     // }
 
+    return index;
+}
 
-    printf("W xuat hien trong S o vi tri %d\n", index);
+int main() {
+    char s[100000], w[100000];
+    int lenS, lenW;
 
-    // if(check)
-    //     printf("W xuat hien trong S o vi tri %d\n", index);
-    // else {
-    //     printf("W khong xuat hien trong S\n");
-    // }
+    printf("Nhap xau S: ");
+    scanf("%[^\n]s",s);
+
+    while ((getchar()) != '\n');
+
+    printf("Nhap xau W: ");
+    scanf("%[^\n]s",w);
+
+    lenS = strlen(s);
+    lenW = strlen(w);
+
+    if(lenW > lenS || !strstr(s, w)) {
+        printf("W khong xuat hien trong S\n");
+        return 0;
+    }
+
+    printf("W xuat hien trong S o vi tri %d\n", findSubstrIntoStr(s, w));
 
     return 0;
 }

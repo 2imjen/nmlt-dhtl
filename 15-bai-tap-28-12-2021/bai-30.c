@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+void nhap(int a[], int n) {
+    int i;
+
+    for(i = 0; i < n; i++) {
+        printf("a[%d] = ", i);
+        scanf("%d", &a[i]);
+    }
+}
+
 int main() {
     int n;
     int a[1000];
@@ -9,10 +18,7 @@ int main() {
     printf("N = ");
     scanf("%d", &n);
 
-    for(i = 0; i < n; i++) {
-        printf("a[%d] = ", i);
-        scanf("%d", &a[i]);
-    }
+    nhap(a, n);
 
     max = a[0], countMax = 1;
 

@@ -34,6 +34,7 @@
 
 - Xóa buffer enter trước khi nhập vào 1 chuỗi bất kì: while(getchar() != '\n);
 
+- strstr(str, substr): tìm chuỗi con nếu có trả về con trỏ trỏ đến vị trí đầu tiên xuất hiện, nếu không trả về NULL
 - strcpy(char *dest, char *source): copy từ source -> dest
 - strncpy(char *dest, char *source, int n): copy n kí tự của source -> dest
 - strlen(s): lấy ra độ dài chuỗi

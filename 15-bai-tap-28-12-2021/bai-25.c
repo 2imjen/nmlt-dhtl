@@ -1,13 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    char w[100000];
+void solve(char w[]) {
     int n, tmp;
     int lenSubW, i;
-
-    printf("Nhap W = ");
-    scanf("%[^\n]s", &w);
 
     n = strlen(w);
     tmp = n;
@@ -25,6 +21,15 @@ int main() {
 
         printf("\n");
     }
+}
+
+int main() {
+    char w[100000];
+
+    printf("Nhap W = ");
+    scanf("%[^\n]s", &w);
+
+    solve(w);
 
     return 0;
 }

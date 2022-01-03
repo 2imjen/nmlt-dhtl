@@ -1,23 +1,26 @@
 #include <stdio.h>
 #include <string.h>
 
+void clearNumberIntoStr(char w[]) {
+    int i, lenW;
+
+    lenW = strlen(w);
+
+    i = 0;
+    while(i < lenW)
+        if(w[i] >= 48 && w[i] <= 57)
+            strcpy(&w[i], &w[i+1]);
+        else
+            i++;
+}
+
 int main() {
     char w[100000];
-    int lenW, i, j, count; 
     
     printf("Nhap W = ");
     scanf("%[^\n]s", w);
 
-    lenW = strlen(w);
-
-    i = 0, count = 0;
-    while(i < lenW - count)
-        if(w[i] >= 48 && w[i] <= 57) {
-            strcpy(&w[i], &w[i+1]);
-            count++;
-        }
-        else
-            i++;
+    clearNumberIntoStr(w);
 
     printf("W sau khi xoa cac chu so = %s", w);
 

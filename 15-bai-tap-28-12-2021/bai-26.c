@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
+void printArr(int a[], int n) {
+    int i;
+
+    for(i = 0; i < n; i++)
+        printf(" %d", a[i]);
+}
+
 int main() {
     int a[1000];
     int n;
@@ -19,8 +26,7 @@ int main() {
     }
 
     printf("Day A =");
-    for(i = 0; i < n; i++)
-        printf(" %d", a[i]);
+    printArr(a, n);
 
     printf("\nSo so am trong A: %d", count);
 
