@@ -1,42 +1,68 @@
 #include <stdio.h>
 #include <string.h>
 
-int max(int a, int b) {
-    return a > b ? a : b;
+void insert(char w[], char s[], int pos1, int pos2) {
+    int lenW, lenS;
+    char tmp[10000];
+
+    lenW = strlen(w);
+    lenS = strlen(s);
+
+    //chèn vào pos1
+    strcpy(tmp, &w[pos1]);
+
+    strcpy(&w[pos1], s);
+    
+    w[pos1 + lenS] = '\0';
+
+    strcat(w, tmp);
+
+    //chèn vào pos2
+    tmp[0] = '\0';
+    strcpy(tmp, &w[pos2]);
+
+    strcpy(&w[pos2], s);
+    
+    w[pos2 + lenS] = '\0';
+
+    strcat(w, tmp);
 }
 
 int main() {
     char w[1000], s[1000];
     int p, q;
-    int mn, mx;
-    int lenW, lenS;
+    int lenW, lenS, tmp;
 
     printf("Nhap W = ");
-    fgets(w, sizeof(w), stdin);
+    scanf("%[^\n]s", w);
 
+    // Clearing buffer to enter string
     while (getchar() != '\n');
 
     printf("Nhap S = ");
-    fgets(s, sizeof(s), stdin);
+    scanf("%[^\n]s", s);
 
     printf("P = ");
     scanf("%d", &p);
     printf("Q = ");
     scanf("%d", &q);
 
-    lenW = strlen(w) - 1;
-    lenS = strlen(s) - 1;
-
-    mx = max(p, q);
-    mn = p + q - mx;
-
-    printf("%d %d\n", lenW, lenS);
-
-    strcpy(&w[mx + lenS], &w[mx]);
+    lenW = strlen(w);
+    lenS = strlen(s);
     
-    printf("%d %d\n", mx, mn);
+    if(p > lenW || q > lenW)
+        return 0;
 
-    printf("%s", w);
+    //luôn để cho p > q
+    if(p < q) {
+        tmp = q;
+        q = p;
+        p = tmp;
+    }
+
+    insert(w, s, p, q);
+
+    printf("Ket qua: %s", w);
 
     return 0;
 }

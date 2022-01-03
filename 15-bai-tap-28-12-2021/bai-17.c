@@ -13,6 +13,7 @@ int main() {
         for(j = 1; j <= n; j++)
             if(j == n)
                 printf("0\n");
+            else
             printf("0 ");
     }
 
