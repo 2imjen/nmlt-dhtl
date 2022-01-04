@@ -2,9 +2,13 @@
 #include <string.h>
 
 int main() {
-    int a = 555;
+    char w[1000000];
+    int lenW;
 
-    printf("%03d", a);
+    printf("Nhap W = ");
+    scanf("%[^\n]s", w);
+
+    printf("%s", w+2);
 
     return 0;
 }

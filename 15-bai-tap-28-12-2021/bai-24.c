@@ -4,29 +4,26 @@
 void trim(char w[]) {
     int lenW, i;
 
-    while(w[0] == ' ')
+    while (w[0] == ' ')
         strcpy(&w[0], &w[1]);
 
     lenW = strlen(w);
 
     i = 1;
-    while(w[lenW - i] == ' ') {
+    while (w[lenW - i] == ' ') {
         w[lenW - i] = '\0';
         i++;
     }
 }
 
 void removeSpacesBetweenWord(char w[]) {
-    int i, lenW, count;
+    int i, lenW;
 
     lenW = strlen(w);
-    i = 0, count = 0;
-    while(i < lenW - count) {
-        if(w[i] == ' ' && w[i+1] == ' ') {
+    i = 0;
+    while (i < lenW) {
+        if (w[i] == ' ' && w[i+1] == ' ')
             strcpy(&w[i], &w[i+1]);
-            count++;
-            w[lenW - count] = '\0';
-        }
         else
             i++;
     }
