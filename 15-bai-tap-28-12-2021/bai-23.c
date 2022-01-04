@@ -28,23 +28,27 @@
 //     strcat(w, tmp);
 // }
 
-void insert(char w[], char s[], int pos1) {
+void insert(char w[], char s[], int pos) {
     int lenW, lenS;
-    char tmp[10000];
+    char tmp[500];
 
     lenW = strlen(w);
     lenS = strlen(s);
 
-    strcpy(tmp, &w[pos1]);
-    strcpy(&w[pos1], s);
+    strcpy(tmp, &w[pos]);
+
+    printf("\nW = %s", w);
+
+    strcpy(&w[pos], s);
     
-    w[pos1 + lenS] = '\0';
+    printf("\nW = %s", w);
+    // w[pos + lenS] = '\0';
 
     strcat(w, tmp);
 }
 
 int main() {
-    char w[1000], s[1000];
+    char w[500], s[500];
     int p, q;
     int lenW, lenS, tmp;
 
