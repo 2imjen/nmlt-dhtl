@@ -13,7 +13,6 @@ void solve(char w[]) {
     while(tmp--) {
         lenSubW = 1;
         while(lenSubW <= 3) {
-            if(lenSubW == 3)
                 printf("%c", w[i]);
             i++;
             i %= n;
@@ -27,7 +26,8 @@ int main() {
     char w[10000];
 
     printf("Nhap W = ");
-    scanf("%[^\n]s", &w);
+    fgets(w, sizeof(w), stdin);
+    // scanf("%[^\n]s", &w);
 
     solve(w);
 
