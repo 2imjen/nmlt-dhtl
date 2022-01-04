@@ -1,29 +1,44 @@
 #include <stdio.h>
 #include <string.h>
 
-void insert(char w[], char s[], int pos1, int pos2) {
+// void insert(char w[], char s[], int pos1, int pos2) {
+//     int lenW, lenS;
+//     char tmp[10000];
+
+//     lenW = strlen(w);
+//     lenS = strlen(s);
+
+//     //chèn vào pos1
+//     strcpy(tmp, &w[pos1]);
+
+//     strcpy(&w[pos1], s);
+    
+//     w[pos1 + lenS] = '\0';
+
+//     strcat(w, tmp);
+
+//     //chèn vào pos2
+//     tmp[0] = '\0';
+//     strcpy(tmp, &w[pos2]);
+
+//     strcpy(&w[pos2], s);
+    
+//     w[pos2 + lenS] = '\0';
+
+//     strcat(w, tmp);
+// }
+
+void insert(char w[], char s[], int pos1) {
     int lenW, lenS;
     char tmp[10000];
 
     lenW = strlen(w);
     lenS = strlen(s);
 
-    //chèn vào pos1
     strcpy(tmp, &w[pos1]);
-
     strcpy(&w[pos1], s);
     
     w[pos1 + lenS] = '\0';
-
-    strcat(w, tmp);
-
-    //chèn vào pos2
-    tmp[0] = '\0';
-    strcpy(tmp, &w[pos2]);
-
-    strcpy(&w[pos2], s);
-    
-    w[pos2 + lenS] = '\0';
 
     strcat(w, tmp);
 }
@@ -60,7 +75,9 @@ int main() {
         p = tmp;
     }
 
-    insert(w, s, p, q);
+    //chèn pos lớn hơn trước p > q
+    insert(w, s, p);
+    insert(w, s, q);
 
     printf("Ket qua: %s", w);
 
