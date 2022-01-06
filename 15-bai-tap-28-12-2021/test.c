@@ -2,13 +2,15 @@
 #include <string.h>
 
 int main() {
-    char w[1000000];
-    int lenW;
+    int a = 47;
+    int b = 1;
+    int tmp;
 
-    printf("Nhap W = ");
-    scanf("%[^\n]s", w);
+    tmp = a;
+    a = b;
+    a = 1, b = 1;
 
-    printf("%s", w+2);
+    // b = tmp;
 
     return 0;
 }
