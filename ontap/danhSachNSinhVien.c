@@ -18,15 +18,6 @@ int main() {
         gets(a[i]);
     }
 
-    8 47 67 1 34
-    8 47 1 34 67
-    8 1 47
-    1 8 34 47 67
-
-    int tmp = 47
-    47 = 1
-    1 = tmp
-
     //sắp xếp
     for(i = 0; i < n-1; i++) {
         for(j = 0; j < n-1; j++) {
@@ -38,6 +29,7 @@ int main() {
         }
     }
 
+    // in ra màn hình
     for(i = 0; i < n; i++)
         printf("Ten SV %d: %s\n", i+1, a[i]);
 
