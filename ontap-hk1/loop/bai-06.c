@@ -4,7 +4,7 @@
 int main() {
     int n;
     int count;
-    int tbu;
+    float tbu;
     int i, tong;
 
     printf("Nhap n = ");
@@ -16,8 +16,14 @@ int main() {
     for (i = 1; i <= n; i++)
         if (n % i == 0) {
             count++;
+            tong += i;
+
             printf(" %d", i);
         }
+
+    tbu = (float)tong / count;
+
+    printf("\nTrung binh cong cac uoc so cua %d: %g", n, tbu);
 
     return 0;
 }
