@@ -36,14 +36,11 @@ int main() {
     printf("Nhap W = ");
     scanf("%[^\n]s", w);
 
-    // printf("%d", strlen(w));
-
     lenW = strlen(w);
 
     trim(w);
 
     removeSpacesBetweenWord(w);
 
-    printf("Chuan hoa = ");
-    printf("%s", w);
+    printf("Chuan hoa = %s", w);
 }

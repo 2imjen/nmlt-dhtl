@@ -1,16 +1,27 @@
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 
 int main() {
-    int a = 47;
-    int b = 1;
-    int tmp;
+    float a, b, c;
+    float ab, bc, ca;
+    float max;
 
-    tmp = a;
-    a = b;
-    a = 1, b = 1;
+    printf("A = ");
+    scanf("%f", &a);
+    printf("B = ");
+    scanf("%f", &b);
+    printf("C = ");
+    scanf("%f", &c);
 
-    // b = tmp;
+    ab = pow(a, b);
+    bc = pow(b, c);
+    ca = pow(c, a);
+
+    max = ab;
+    if(bc > max) max = bc; 
+    if(ca > max) max = ca; 
+
+    printf("So long nhat: %g", max);
 
     return 0;
 }
